@@ -14,11 +14,11 @@ function Game() {
     reyTheme.play();
     reyTheme.volume = 0.7;
 
-    // przeliczamy pozycję futrzaka i monety (x/y 0-9)na tablicowy zapis liczby pól (0-99)
+    // przeliczamy pozycję futrzaka i porga (x/y 0-9)na tablicowy zapis liczby pól (0-99)
     this.index = function(x,y) {
         return x + (y * 10);
     };
-    // wywołujemy monetę i futrzaka na planszy
+    // wywołujemy porga i futrzaka na planszy
     this.showFurry = function() {
         this.hideVisibleFurry();
         this.board[this.index (this.furry.x, this.furry.y)].classList.add("furry");
@@ -104,7 +104,7 @@ function Game() {
         if (this.furry.x < 0 || this.furry.y < 0 || this.furry.x > 9 || this.furry.y > 9) { 
            clearInterval(this.idSetInterval);
            this.hideVisibleFurry();
-           alert("HUNT OVER \u2665                                          SCORE: " + this.score + "\n\nYou content yourself with the poor animals you've already caught\nand let some purgs live till tomorrow..."); 
+           alert("HUNT OVER \u2665                                          SCORE: " + this.score + "\n\nYou content yourself with the poor animals you've already caught\nand let some porgs live till tomorrow..."); 
         }
     };
 }
